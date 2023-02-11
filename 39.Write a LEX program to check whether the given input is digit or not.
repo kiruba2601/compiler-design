@@ -1,0 +1,12 @@
+39.Write a LEX program to check whether the given input is digit or not.
+Program: (digit_or_not.l)
+%%
+[0-9]+ {printf("\nValid digit \n");} 
+.* printf("\nInvalid digit\n");
+%%
+int yywrap(){}
+int main()											
+{
+yylex();
+return 0;
+}
